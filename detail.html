@@ -1,0 +1,27 @@
+<md-dialog aria-label="Détail">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{user.name}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <table border="">
+          <tr ng-repeat="user in ctrl.listUsers">
+            <td>{{user.name}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.lib}}</td>
+            <td>{{user.birthDate | ageFilter}}
+          </tr>
+        </table>
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

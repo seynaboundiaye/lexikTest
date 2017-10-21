@@ -1,0 +1,33 @@
+<div layout-gt-sm="row">
+  <md-input-container class="md-block" flex-gt-sm>
+    <label>Nom</label>
+    <input ng-model="user.name">
+  </md-input-container>
+  <md-input-container class="md-block" flex-gt-sm>
+    <label>Prenom</label>
+    <input ng-model="user.firstname">
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>Email</label>
+    <input ng-model="user.email">
+  </md-input-container>
+</div>
+<div layout-gt-sm="row">
+  <md-input-container>
+    <label>Enter date</label>
+    <md-datepicker ng-model="birthDate"></md-datepicker>
+  </md-input-container>
+  <md-input-container flex="50">
+    <label>Groupes</label>
+    <md-select name="type" ng-model="user.groupId" required>
+      <!-- <md-option value="app">comptabilite</md-option>
+      <md-option value="web">Administration</md-option>
+      <md-option value="web">Informatique</md-option> -->
+      <md-option ng-repeat="groupe in groupes" ng-value="{{groupe.id}}">{{groupe.lib}}</md-option>
+    </md-select>
+  </md-input-container>
+</div>
+<md-button ng-click="insertUser(user)">
+  Valider
+</md-button>

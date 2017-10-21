@@ -1,0 +1,12 @@
+
+td.liste:hover{
+     background-color: #;
+}
+
+td.liste :nth-child(odd){
+     background-color: #FD9898;
+}
+
+table tr:nth-child(odd){
+  background-color:#FD9898;
+}
